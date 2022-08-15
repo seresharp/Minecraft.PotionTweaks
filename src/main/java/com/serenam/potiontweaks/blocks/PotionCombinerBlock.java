@@ -26,9 +26,11 @@ public class PotionCombinerBlock extends BlockWithEntity
     public PotionCombinerBlock()
     {
         super(FabricBlockSettings
-                .of(Material.WOOD)
-                .strength(2.0F, 3.0F)
-                .sounds(BlockSoundGroup.WOOD).nonOpaque());
+                .of(Material.METAL)
+                .strength(2.0F)
+                .sounds(BlockSoundGroup.METAL)
+                .nonOpaque()
+                .requiresTool());
 
         setDefaultState(stateManager.getDefaultState().with(FACING, Direction.NORTH));
     }

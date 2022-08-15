@@ -12,7 +12,7 @@ import net.minecraft.util.math.MathHelper;
 
 public class PotionCombinerScreen extends HandledScreen<PotionCombinerScreenHandler>
 {
-    private static final Identifier TEXTURE = new Identifier(PotionTweaksMod.MOD_ID, "textures/gui/container/better_brewer.png");
+    private static final Identifier TEXTURE = new Identifier(PotionTweaksMod.MOD_ID, "textures/gui/container/potion_combiner.png");
 
     public PotionCombinerScreen(PotionCombinerScreenHandler handler, PlayerInventory inventory, Text title)
     {
@@ -30,6 +30,17 @@ public class PotionCombinerScreen extends HandledScreen<PotionCombinerScreenHand
         int x = (width - backgroundWidth) / 2;
         int y = (height - backgroundHeight) / 2;
         drawTexture(matrices, x, y, 0, 0, backgroundWidth, backgroundHeight);
+
+        // Draw arrow
+        int brewTime = handler.getBrewTime();
+        if (brewTime > 0)
+        {
+            int brewTimeHeight = (int)(28f * (1f - (brewTime / 200f)));
+            if (brewTimeHeight > 0)
+            {
+                drawTexture(matrices, x + 134, y + 37, 176, 0, 9, brewTimeHeight);
+            }
+        }
     }
 
     @Override

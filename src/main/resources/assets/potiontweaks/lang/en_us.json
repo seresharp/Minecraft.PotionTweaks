@@ -1,7 +1,7 @@
 {
-  "item.potiontweaks.ruby": "Ruby",
-  "item.potiontweaks.sapphire": "Sapphire",
-  "block.potiontweaks.ruby_block": "Ruby Block",
   "block.potiontweaks.better_brewer": "Villager Brewer",
-  "block.potiontweaks.empty_brewer": "Empty Villager Brewer"
+  "block.potiontweaks.empty_brewer": "Empty Villager Brewer",
+  "block.potiontweaks.potion_combiner": "Potion Combiner",
+
+  "item.potiontweaks.combo_potion": "Combo Potion"
 }
