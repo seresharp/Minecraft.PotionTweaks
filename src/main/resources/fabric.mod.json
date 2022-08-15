@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "potiontweaks",
+  "version": "${version}",
+
+  "name": "Potion Tweaks",
+  "description": "Various additions to improve the vanilla potion experience",
+  "authors": [
+    "SerenaM"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": ""
+  },
+
+  "license": "mit",
+  "icon": "assets/potiontweaks/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.serenam.potiontweaks.PotionTweaksMod"
+    ],
+    "client": [
+      "com.serenam.potiontweaks.PotionTweaksModClient"
+    ]
+  },
+  "mixins": [],
+
+  "depends": {
+    "fabricloader": ">=0.14.6",
+    "fabric": "*",
+    "minecraft": "~1.19",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}

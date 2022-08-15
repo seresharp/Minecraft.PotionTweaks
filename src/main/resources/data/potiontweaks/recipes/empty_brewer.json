@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GEG",
+    "GBG",
+    "PPP"
+  ],
+  "key": {
+    "P": {
+      "tag": "minecraft:planks"
+    },
+    "G": {
+      "item": "minecraft:glass"
+    },
+    "B": {
+      "item": "minecraft:brewing_stand"
+    },
+    "E": {
+      "item": "minecraft:emerald"
+    }
+  },
+  "result": {
+    "item": "potiontweaks:empty_brewer",
+    "count": 1
+  }
+}

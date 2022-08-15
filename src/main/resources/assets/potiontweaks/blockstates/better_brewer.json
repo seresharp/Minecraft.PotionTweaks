@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "potiontweaks:block/better_brewer"
+    },
+    "facing=east": {
+      "model": "potiontweaks:block/better_brewer",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "potiontweaks:block/better_brewer",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "potiontweaks:block/better_brewer",
+      "y": 270
+    }
+  }
+}
