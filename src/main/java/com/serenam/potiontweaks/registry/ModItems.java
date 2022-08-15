@@ -16,9 +16,14 @@ public class ModItems
 
     public static final EmptyBrewerItem EMPTY_BREWER = new EmptyBrewerItem();
 
+    public static final BlockItem POTION_COMBINER = new BlockItem(ModBlocks.POTION_COMBINER, new FabricItemSettings()
+            .group(ItemGroup.MISC));
+
     public static void registerItems()
     {
         Registry.register(Registry.ITEM, new Identifier(PotionTweaksMod.MOD_ID, "better_brewer"), BETTER_BREWER);
         Registry.register(Registry.ITEM, new Identifier(PotionTweaksMod.MOD_ID, "empty_brewer"), EMPTY_BREWER);
+
+        Registry.register(Registry.ITEM, new Identifier(PotionTweaksMod.MOD_ID, "potion_combiner"), POTION_COMBINER);
     }
 }

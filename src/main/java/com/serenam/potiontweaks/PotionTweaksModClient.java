@@ -1,6 +1,7 @@
 package com.serenam.potiontweaks;
 
 import com.serenam.potiontweaks.gui.BetterBrewerScreen;
+import com.serenam.potiontweaks.gui.PotionCombinerScreen;
 import com.serenam.potiontweaks.registry.ModBlocks;
 import com.serenam.potiontweaks.registry.ModScreenHandlers;
 import net.fabricmc.api.ClientModInitializer;
@@ -18,6 +19,9 @@ public class PotionTweaksModClient implements ClientModInitializer
     {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BETTER_BREWER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.EMPTY_BREWER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTION_COMBINER, RenderLayer.getCutout());
+
         ScreenRegistry.register(ModScreenHandlers.BETTER_BREWER, BetterBrewerScreen::new);
+        ScreenRegistry.register(ModScreenHandlers.POTION_COMBINER, PotionCombinerScreen::new);
     }
 }

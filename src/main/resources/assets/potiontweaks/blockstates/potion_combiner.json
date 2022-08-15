@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "potiontweaks:block/potion_combiner"
+    },
+    "facing=east": {
+      "model": "potiontweaks:block/potion_combiner",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "potiontweaks:block/potion_combiner",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "potiontweaks:block/potion_combiner",
+      "y": 270
+    }
+  }
+}
