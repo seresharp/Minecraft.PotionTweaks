@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "potiontweaks:block/singularity_crafter"
+    },
+    "facing=east": {
+      "model": "potiontweaks:block/singularity_crafter",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "potiontweaks:block/singularity_crafter",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "potiontweaks:block/singularity_crafter",
+      "y": 270
+    }
+  }
+}

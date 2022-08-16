@@ -26,9 +26,11 @@ public class SingularityCrafterBlock extends BlockWithEntity
     public SingularityCrafterBlock()
     {
         super(FabricBlockSettings
-                .of(Material.WOOD)
-                .strength(2.0F, 3.0F)
-                .sounds(BlockSoundGroup.WOOD).nonOpaque());
+                .of(Material.STONE)
+                .strength(50f, 1200f)
+                .sounds(BlockSoundGroup.STONE)
+                .nonOpaque()
+                .requiresTool());
 
         setDefaultState(stateManager.getDefaultState().with(FACING, Direction.NORTH));
     }

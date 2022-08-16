@@ -21,6 +21,7 @@ public class PotionTweaksModClient implements ClientModInitializer
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BETTER_BREWER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.EMPTY_BREWER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.POTION_COMBINER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SINGULARITY_CRAFTER, RenderLayer.getCutout());
 
         ScreenRegistry.register(ModScreenHandlers.BETTER_BREWER, BetterBrewerScreen::new);
         ScreenRegistry.register(ModScreenHandlers.POTION_COMBINER, PotionCombinerScreen::new);

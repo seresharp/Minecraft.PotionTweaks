@@ -12,8 +12,7 @@ import net.minecraft.util.math.MathHelper;
 
 public class SingularityCrafterScreen extends HandledScreen<SingularityCrafterScreenHandler>
 {
-    private static final Identifier TEXTURE = new Identifier(PotionTweaksMod.MOD_ID, "textures/gui/container/better_brewer.png");
-    private static final int[] BUBBLE_PROGRESS = new int[] { 29, 24, 20, 16, 11, 6, 0 };
+    private static final Identifier TEXTURE = new Identifier(PotionTweaksMod.MOD_ID, "textures/gui/container/singularity_crafter.png");
 
     public SingularityCrafterScreen(SingularityCrafterScreenHandler handler, PlayerInventory inventory, Text title)
     {

@@ -37,8 +37,8 @@ public class SingularityCrafterScreenHandler extends ScreenHandler
         inventory.onOpen(playerInventory.player);
 
         // Our inventory
-        addSlot(new PotionSlot(inventory, 0, 17, 17));
-        addSlot(new SingularitySlot(inventory, 1, 17, 35));
+        addSlot(new PotionSlot(inventory, 0, 79, 17));
+        addSlot(new SingularitySlot(inventory, 1, 79, 53));
 
         // The player inventory
         for (int m = 0; m < 3; m++)

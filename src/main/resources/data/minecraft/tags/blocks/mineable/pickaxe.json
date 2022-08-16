@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "potiontweaks:potion_combiner"
+    "potiontweaks:potion_combiner",
+    "potiontweaks:singularity_crafter"
   ]
 }
