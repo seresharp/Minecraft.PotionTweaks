@@ -1,12 +1,12 @@
 package com.serenam.potiontweaks.util;
 
+import com.serenam.potiontweaks.registry.ModItems;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.potion.PotionUtil;
 import net.minecraft.text.Text;
 
-import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -15,7 +15,7 @@ public class CustomPotionUtil
 {
     public static ItemStack CombinePotions(ItemStack potion1, ItemStack potion2)
     {
-        if (!IsPotion(potion1) || !IsPotion(potion2) || potion1.getItem() != potion2.getItem())
+        if (!IsNormalPotion(potion1) || !IsNormalPotion(potion2) || potion1.getItem() != potion2.getItem())
         {
             return ItemStack.EMPTY;
         }
@@ -82,8 +82,40 @@ public class CustomPotionUtil
         return potion;
     }
 
-    public static boolean IsPotion(ItemStack potion)
+    public static ItemStack ToSingularity(ItemStack potion)
+    {
+        if (!IsNormalPotion(potion))
+        {
+            return ItemStack.EMPTY;
+        }
+
+        ItemStack singularity;
+        if (potion.isOf(Items.POTION))
+        {
+            singularity = new ItemStack(ModItems.SINGULARITY);
+        }
+        else if (potion.isOf(Items.SPLASH_POTION))
+        {
+            singularity = new ItemStack(ModItems.SPLASH_SINGULARITY);
+        }
+        else
+        {
+            singularity = new ItemStack(ModItems.LINGERING_SINGULARITY);
+        }
+
+        singularity.setNbt(potion.getNbt());
+        singularity.setDamage(999);
+
+        return singularity;
+    }
+
+    public static boolean IsNormalPotion(ItemStack potion)
     {
         return potion.isOf(Items.POTION) || potion.isOf(Items.SPLASH_POTION) || potion.isOf(Items.LINGERING_POTION);
+    }
+
+    public static boolean IsSingularity(ItemStack potion)
+    {
+        return potion.isOf(ModItems.SINGULARITY) || potion.isOf(ModItems.SPLASH_SINGULARITY) || potion.isOf(ModItems.LINGERING_SINGULARITY);
     }
 }

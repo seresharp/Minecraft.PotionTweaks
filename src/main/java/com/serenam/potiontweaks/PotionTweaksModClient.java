@@ -2,6 +2,7 @@ package com.serenam.potiontweaks;
 
 import com.serenam.potiontweaks.gui.BetterBrewerScreen;
 import com.serenam.potiontweaks.gui.PotionCombinerScreen;
+import com.serenam.potiontweaks.gui.SingularityCrafterScreen;
 import com.serenam.potiontweaks.registry.ModBlocks;
 import com.serenam.potiontweaks.registry.ModScreenHandlers;
 import net.fabricmc.api.ClientModInitializer;
@@ -23,5 +24,6 @@ public class PotionTweaksModClient implements ClientModInitializer
 
         ScreenRegistry.register(ModScreenHandlers.BETTER_BREWER, BetterBrewerScreen::new);
         ScreenRegistry.register(ModScreenHandlers.POTION_COMBINER, PotionCombinerScreen::new);
+        ScreenRegistry.register(ModScreenHandlers.SINGULARITY_CRAFTER, SingularityCrafterScreen::new);
     }
 }

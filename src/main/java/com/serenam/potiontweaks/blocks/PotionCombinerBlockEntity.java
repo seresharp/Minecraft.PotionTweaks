@@ -146,7 +146,7 @@ public class PotionCombinerBlockEntity extends BlockEntity implements NamedScree
         {
             case 0 -> stack.isOf(Items.BLAZE_POWDER);
             case 1 -> stack.isOf(Items.GLOWSTONE_DUST);
-            case 2, 3 -> CustomPotionUtil.IsPotion(stack);
+            case 2, 3 -> CustomPotionUtil.IsNormalPotion(stack);
             default -> false;
         };
     }

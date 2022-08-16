@@ -18,15 +18,22 @@ public class LingeringSingularityPotionItem extends LingeringPotionItem
 {
     public LingeringSingularityPotionItem()
     {
-        super(new FabricItemSettings().group(ItemGroup.BREWING));
+        super(new FabricItemSettings()
+                .group(ItemGroup.BREWING)
+                .maxDamageIfAbsent(1000));
     }
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand)
     {
+        ItemStack itemStack = user.getStackInHand(hand);
+        if (itemStack.isDamaged())
+        {
+            return TypedActionResult.pass(itemStack);
+        }
+
         world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_LINGERING_POTION_THROW, SoundCategory.NEUTRAL, 0.5F, 0.4F / (world.getRandom().nextFloat() * 0.4F + 0.8F));
 
-        ItemStack itemStack = user.getStackInHand(hand);
         if (!world.isClient)
         {
             ItemStack linger = new ItemStack(Items.LINGERING_POTION);

@@ -21,7 +21,7 @@ public class EmptyBrewerItem extends BlockItem
 {
     public EmptyBrewerItem()
     {
-        super(ModBlocks.EMPTY_BREWER, new FabricItemSettings().group(ItemGroup.MATERIALS));
+        super(ModBlocks.EMPTY_BREWER, new FabricItemSettings().group(ItemGroup.BREWING));
     }
 
     @Override

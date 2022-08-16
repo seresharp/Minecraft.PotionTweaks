@@ -13,13 +13,20 @@ public class SplashSingularityPotionItem extends SplashPotionItem
 {
     public SplashSingularityPotionItem()
     {
-        super(new FabricItemSettings().group(ItemGroup.BREWING));
+        super(new FabricItemSettings()
+                .group(ItemGroup.BREWING)
+                .maxDamageIfAbsent(1000));
     }
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand)
     {
         ItemStack stack = user.getStackInHand(hand).copy();
+        if (stack.isDamaged())
+        {
+            return TypedActionResult.pass(stack);
+        }
+
         super.use(world, user, hand);
         user.getStackInHand(hand).increment(stack.getCount() - user.getStackInHand(hand).getCount());
 

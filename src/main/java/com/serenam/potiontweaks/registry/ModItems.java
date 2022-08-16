@@ -20,12 +20,15 @@ public class ModItems
 
     // Block Items
     public static final BlockItem BETTER_BREWER = new BlockItem(ModBlocks.BETTER_BREWER, new FabricItemSettings()
-            .group(ItemGroup.MISC));
+            .group(ItemGroup.BREWING));
 
     public static final EmptyBrewerItem EMPTY_BREWER = new EmptyBrewerItem();
 
     public static final BlockItem POTION_COMBINER = new BlockItem(ModBlocks.POTION_COMBINER, new FabricItemSettings()
-            .group(ItemGroup.MISC));
+            .group(ItemGroup.BREWING));
+
+    public static final BlockItem SINGULARITY_CRAFTER = new BlockItem(ModBlocks.SINGULARITY_CRAFTER, new FabricItemSettings()
+            .group(ItemGroup.BREWING));
 
     public static void registerItems()
     {
@@ -37,5 +40,7 @@ public class ModItems
         Registry.register(Registry.ITEM, new Identifier(PotionTweaksMod.MOD_ID, "empty_brewer"), EMPTY_BREWER);
 
         Registry.register(Registry.ITEM, new Identifier(PotionTweaksMod.MOD_ID, "potion_combiner"), POTION_COMBINER);
+
+        Registry.register(Registry.ITEM, new Identifier(PotionTweaksMod.MOD_ID, "singularity_crafter"), SINGULARITY_CRAFTER);
     }
 }
