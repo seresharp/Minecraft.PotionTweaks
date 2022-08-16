@@ -3,5 +3,8 @@
   "block.potiontweaks.empty_brewer": "Empty Villager Brewer",
   "block.potiontweaks.potion_combiner": "Potion Combiner",
 
-  "item.potiontweaks.combo_potion": "Combo Potion"
+  "item.potiontweaks.combo_potion": "Combo Potion",
+  "item.potiontweaks.singularity": "Singularity Potion",
+  "item.potiontweaks.splash_singularity": "Splash Singularity",
+  "item.potiontweaks.lingering_singularity": "Lingering Singularity"
 }
